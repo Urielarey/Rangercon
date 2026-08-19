@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ranger Con — La convención gaming y cultura pop más épica del año.">
+  <title>Ranger Con | Convención Gaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Fondo animado de líneas de píxeles -->
+  <div class="pixel-bg" aria-hidden="true">
+    <canvas id="pixelCanvas"></canvas>
+  </div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <a href="#inicio" class="logo">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#starGrad)"/>
+        <defs>
+          <linearGradient id="starGrad" x1="2" y1="2" x2="22" y2="22">
+            <stop stop-color="#FFD700"/>
+            <stop offset="1" stop-color="#FF6B35"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-text">RANGERCON</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#equipo" class="nav-link">Equipo</a></li>
+        <li><a href="#eventos" class="nav-link">Eventos</a></li>
+        <li><a href="#videojuego" class="nav-link">Videojuego</a></li>
+        <li><a href="#rifa" class="nav-link">Rifa</a></li>
+        <li><a href="#sumate" class="nav-link">Sumate</a></li>
+        <li><a href="#aliados" class="nav-link">Aliados</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="social-link" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Discord">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-ranger"><span class="letter" style="--lc:#ff3131">R</span><span class="letter" style="--lc:#3b82f6">A</span><span class="letter" style="--lc:#ffd700">N</span><span class="letter" style="--lc:#ec4899">G</span><span class="letter" style="--lc:#22c55e">E</span><span class="letter" style="--lc:#c0c0c0">R</span></span>
+          <span class="title-con"><span class="letter" style="--lc:#ff3131">C</span><span class="letter" style="--lc:#3b82f6">O</span><span class="letter" style="--lc:#ffd700">N</span></span>
+        </h1>
+
+        <div class="hero-cta">
+          <a href="#sumate" class="btn btn-primary">Sumate al equipo</a>
+          <a href="#eventos" class="btn btn-secondary">
+            Ver eventos
+            <span class="dots" aria-hidden="true">•••</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="section section-nosotros">
+      <div class="container">
+        <div class="nosotros-layout">
+          <aside class="nosotros-sidebar">
+            <span class="nosotros-badge">NOSOTROS</span>
+            <nav class="nosotros-nav" aria-label="Subsecciones de Nosotros">
+              <button class="nosotros-nav-item active" data-tab="resumen">Resumen</button>
+              <button class="nosotros-nav-item" data-tab="historia">Historia</button>
+              <button class="nosotros-nav-item" data-tab="vision">Visión</button>
+              <button class="nosotros-nav-item" data-tab="valores">Valores</button>
+              <button class="nosotros-nav-item" data-tab="mision">Misión</button>
+              <button class="nosotros-nav-item" data-tab="stand">Nuestro Stand</button>
+            </nav>
+          </aside>
+
+          <div class="nosotros-content" id="nosotrosContent">
+            <!-- Generado por JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- El Equipo -->
+    <section id="equipo" class="section section-equipo">
+      <div class="container">
+        <div class="equipo-header">
+          <span class="equipo-badge">EL EQUIPO</span>
+          <h2 class="equipo-title">
+            CONOCÉ A LOS<br>
+            <span class="equipo-title-accent">RANGERS</span>
+          </h2>
+        </div>
+
+        <div class="equipo-tabs">
+          <button class="equipo-tab active" data-team="mighty">MIGHTY MORPHIN</button>
+          <button class="equipo-tab" data-team="zeo">POWER RANGERS ZEO</button>
+        </div>
+
+        <div class="equipo-grid" id="equipoGrid">
+          <!-- Generado por JS -->
+        </div>
+
+        <p class="equipo-hint">Toca cada tarjeta para ver info del personaje y su actor</p>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="eventos" class="section section-eventos">
+      <div class="container">
+        <div class="eventos-header">
+          <span class="eventos-badge">EVENTOS</span>
+          <h2 class="eventos-title">
+            PRÓXIMOS<br>
+            <span class="eventos-title-accent">ENCUENTROS</span>
+          </h2>
+        </div>
+
+        <div class="eventos-tabs">
+          <button class="eventos-tab active" data-filter="proximos">PRÓXIMOS</button>
+          <button class="eventos-tab" data-filter="pasados">PASADOS</button>
+        </div>
+
+        <div class="eventos-grid" id="eventosGrid">
+          <!-- Generado por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestro Videojuego -->
+    <section id="videojuego" class="section section-videojuego">
+      <div class="container">
+        <div class="videojuego-header">
+          <span class="videojuego-badge">PRÓXIMAMENTE</span>
+          <h2 class="videojuego-title">
+            NUESTRO<br>
+            <span class="videojuego-title-accent">VIDEOJUEGO</span>
+          </h2>
+          <p class="videojuego-subtitle">
+            Todavía es una idea en construcción, pero así nos lo imaginamos: un beat 'em up retro 2D
+            donde elegís a tu Ranger favorito y avanzás nivel a nivel enfrentando a los villanos
+            clásicos de la saga, en cooperativo local hasta con 4 jugadores.
+          </p>
+        </div>
+
+        <ul class="videojuego-ideas">
+          <li>Elegí tu Ranger y su Zord</li>
+          <li>Cooperativo local hasta 4 jugadores</li>
+          <li>Jefes clásicos: Rita Repulsa, Lord Zedd, Goldar</li>
+          <li>Pixel art inspirado en los 90s</li>
+        </ul>
+
+        <div class="videojuego-cta">
+          <button type="button" class="btn btn-outline" id="videojuegoNotify">Quiero que me avisen</button>
+          <p class="videojuego-note">* Concepto en desarrollo, todavía sin fecha ni detalles finales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rifa Ranger -->
+    <section id="rifa" class="section section-rifa">
+      <div class="container">
+        <div class="rifa-header">
+          <span class="rifa-badge">RIFA</span>
+          <h2 class="rifa-title">
+            RIFA<br>
+            <span class="rifa-title-accent">RANGER</span>
+          </h2>
+          <p class="rifa-subtitle">Participá y ayudanos a seguir haciendo crecer la comunidad. Elegí tu cantidad de números y sumate al sorteo.</p>
+          <p class="rifa-prize">🏆 1er premio: Figura coleccionable Legacy Megazord + entrada VIP a RangerCon 2026</p>
+        </div>
+
+        <div class="tickets-grid">
+          <div class="ticket-card">
+            <h3 class="ticket-name">1 NÚMERO</h3>
+            <p class="ticket-price">$1.000</p>
+            <ul class="ticket-features">
+              <li>Participás del sorteo</li>
+              <li>Confirmación por email</li>
+            </ul>
+            <button type="button" class="btn btn-outline ticket-btn" data-ticket="1 número">ELEGIR</button>
+          </div>
+
+          <div class="ticket-card ticket-featured">
+            <span class="ticket-badge">MÁS ELEGIDO</span>
+            <h3 class="ticket-name">5 NÚMEROS</h3>
+            <p class="ticket-price">$4.000 <span>ahorrás $1.000</span></p>
+            <ul class="ticket-features">
+              <li>5 números para el sorteo</li>
+              <li>Más chances de ganar</li>
+              <li>Confirmación por email</li>
+            </ul>
+            <button type="button" class="btn btn-primary ticket-btn" data-ticket="5 números">ELEGIR</button>
+          </div>
+
+          <div class="ticket-card">
+            <h3 class="ticket-name">10 NÚMEROS</h3>
+            <p class="ticket-price">$7.500</p>
+            <ul class="ticket-features">
+              <li>10 números para el sorteo</li>
+              <li>Máximas chances de ganar</li>
+              <li>Acceso a sorteo especial de consuelo</li>
+            </ul>
+            <button type="button" class="btn btn-outline ticket-btn" data-ticket="10 números">ELEGIR</button>
+          </div>
+        </div>
+
+        <p class="rifa-note">Sorteo: 30 de noviembre de 2026, en vivo por Instagram. El ganador se contacta por email. *Información de ejemplo, sujeta a confirmación.</p>
+      </div>
+    </section>
+
+    <!-- Sumate -->
+    <section id="sumate" class="section section-sumate">
+      <div class="container">
+        <div class="sumate-header">
+          <span class="sumate-badge">SUMATE</span>
+          <h2 class="sumate-title">
+            ELEGÍ TU<br>
+            <span class="sumate-title-accent">RANGER</span>
+          </h2>
+          <p class="sumate-subtitle">Seleccioná tu personaje favorito y completá el formulario para unirte a la comunidad</p>
+        </div>
+
+        <p class="sumate-label">SELECCIONÁ TU PERSONAJE</p>
+
+        <div class="sumate-colors" id="sumateColors" role="group" aria-label="Seleccioná tu personaje">
+          <!-- Generado por JS -->
+        </div>
+
+        <form class="sumate-form" id="sumateForm" data-theme="red">
+          <div class="sumate-form-row">
+            <div class="sumate-field">
+              <label for="sumateName">NOMBRE COMPLETO</label>
+              <input type="text" id="sumateName" name="name" required placeholder="Tu nombre">
+            </div>
+            <div class="sumate-field">
+              <label for="sumateEmail">EMAIL</label>
+              <input type="email" id="sumateEmail" name="email" required placeholder="tu@email.com">
+            </div>
+          </div>
+
+          <div class="sumate-selected" id="sumateSelected">
+            Personaje elegido: <strong id="sumateSelectedName">Red Ranger</strong>
+          </div>
+
+          <div class="sumate-field">
+            <label for="sumateMessage">MENSAJE (OPCIONAL)</label>
+            <textarea id="sumateMessage" name="message" rows="4" placeholder="Contanos algo sobre tu cosplay, experiencia, o lo que quieras compartir..."></textarea>
+          </div>
+
+          <button type="submit" class="sumate-submit">¡SUMARME AL EQUIPO!</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Nuestros Aliados -->
+    <section id="aliados" class="section section-partners">
+      <div class="container">
+        <div class="partners-header">
+          <span class="partners-badge">PARTNERS</span>
+          <h2 class="partners-title">
+            NUESTROS<br>
+            <span class="partners-title-accent">ALIADOS</span>
+          </h2>
+        </div>
+
+        <div class="partners-grid" id="partnersGrid">
+          <!-- Generado por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section section-contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// CONTACTO</span>
+          <h2 class="section-title">¿Tenés <span class="text-red">preguntas?</span></h2>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Escribí tu consulta..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          </form>
+          <div class="contact-info">
+            <div class="info-item">
+              <span class="info-label">Ubicación</span>
+              <p>Centro de Convenciones, Buenos Aires</p>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email</span>
+              <p>info@rangercon.com</p>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Redes</span>
+              <p>@rangercon en todas las plataformas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#inicio" class="logo footer-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#starGrad2)"/>
+          <defs>
+            <linearGradient id="starGrad2" x1="2" y1="2" x2="22" y2="22">
+              <stop stop-color="#FFD700"/>
+              <stop offset="1" stop-color="#FF6B35"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">RANGER CON</span>
+      </a>
+
+      <div class="footer-social" aria-label="Redes sociales">
+        <a href="#" class="social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.336 31.336 0 0 0 0 12a31.336 31.336 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.336 31.336 0 0 0 24 12a31.336 31.336 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12Z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitch">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0 1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0Zm14.571 11.143-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <p class="footer-copy">&copy; 2026 Ranger Con. Todos los derechos reservados.</p>
+        <p class="footer-credit">Powered by <a href="https://www.byurodev.site" target="_blank" rel="noopener noreferrer">www.byurodev.site</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de confirmación -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+      <h3 id="modalTitle">¡Listo!</h3>
+      <p id="modalMessage"></p>
+      <button class="btn btn-primary" id="modalBtn">Entendido</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
